@@ -43,8 +43,8 @@ $urlcrud = "index.php?page=crud/";
 						    			<?php include('edit.php');?>
 						      		</div>
 						      		<div class="modal-footer">
-							        	<button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-							        	<button type="submit" class="btn btn-primary">Save Changes</button>
+							        	<button type="button" class="btn btn-secondary" data-dismiss="modal">CLOSE</button>
+							        	<button type="submit" class="btn btn-warning">ADD</button>
 						      		</div>
 						      		</form>
 						    	</div>
@@ -71,8 +71,8 @@ $urlcrud = "index.php?page=crud/";
 	    			<?php include('create.php');?>
 	      		</div>
 	      		<div class="modal-footer">
-		        	<button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-		        	<button type="submit" class="btn btn-primary">Save changes</button>
+		        	<button type="button" class="btn btn-secondary" data-dismiss="modal">CLOSE</button>
+		        	<button type="submit" class="btn btn-warning ">ADD</button>
 	      		</div>
 	      		</form>
 	    	</div>

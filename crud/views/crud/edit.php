@@ -5,7 +5,7 @@
 				<label>Nama</label>
 				<input type="text" class="form-control" name="name" required="true" value="<?= $obj->name?>">
 			</div>
-			<hr>
+			
 			<div class="form-group">
 				<label>Work</label>
 				<select class="form-control" name="id_work" required="true">
@@ -14,7 +14,7 @@
 					<option value="2">Backend Dev</option>
 				</select>
 			</div>
-			<hr>
+			
 			<div class="form-group">
 				<label>Salary</label>
 				<select class="form-control" name="id_salary" required="true">
@@ -23,5 +23,5 @@
 					<option value="2">12.000.000</option>
 				</select>
 			</div>
-			<hr>
+			
 			

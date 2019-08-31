@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <title>CRUD KTP NATIVE</title>
+    <title>ARKADEMI BOOTCAMP</title>
     
     <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
     <style type="text/css">
@@ -16,6 +16,15 @@
         background-color:#fff;
         height:1px;
         width:100%;
+      }
+      .img {
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+      }
+      .center {
+        text-align: center;
+
       }
     </style>
    </head>
@@ -119,13 +128,13 @@
              
             e.preventDefault();
              
-            var pid = $(this).attr('data-id');
-            var parent = $(this).parent("td").parent("tr");
-             
+            var pid     = $(this).attr('data-id');
+            var parent  = $(this).parent("td").parent("tr");
+            var user    = $(this).closest("tr").find('td:eq(0)').text();
             bootbox.dialog({
               size: "small",
               message: "Are you sure you want to Delete ?",
-              title: "<i class='glyphicon glyphicon-trash'></i> Delete !",
+              title: "<i class='glyphicon glyphicon-trash'></i> DELETE DATA",
               buttons: {
                 success: {
                   label: "No",
@@ -143,7 +152,7 @@
                       .done(function(response){
                           bootbox.alert({
                               title   : "<i class='glyphicon glyphicon-ok'></i> Sukses",
-                              message : "Data Berhasil Di Hapus",
+                              message : "<img class='img' height='120px' src='checklist.png'><p class='center' ><b>Data "+user+" Berhasil Dihapus</b></p>",
                               size    : "small",
                             }
                           );
