@@ -152,8 +152,8 @@
                       .done(function(response){
                           bootbox.alert({
                               title   : "<i class='glyphicon glyphicon-ok'></i> Sukses",
-                              message : "<img class='img' height='120px' src='checklist.png'><p class='center' ><b>Data "+user+" Berhasil Dihapus</b></p>",
-                              size    : "small",
+                              message : "<img class='img' height='120px' src='checklist.png'><br><br><p class='center' ><b>Data "+user+" Berhasil Dihapus</b></p>",
+                              size    : "medium",
                             }
                           );
                           parent.fadeOut('slow');
