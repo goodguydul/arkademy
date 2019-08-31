@@ -1,39 +1,39 @@
 <?php
-function sampling($chars, $size, $combinations = array()){
+function sampling($chars, $size, $kombs = array()){
 
-    if (empty($combinations)){
-        $combinations = $chars;
+    if (empty($kombs)){
+        $kombs = $chars;
     }
 
     if ($size == 1){
-        return $combinations;
+        return $kombs;
     }
 
-    $new_combinations = array();
+    $new_kombs = array();
 
-    foreach ($combinations as $combination){
+    foreach ($kombs as $komb){
         foreach ($chars as $char){
-            $new_combinations[] = $combination . $char;
+            $new_kombs[] = $komb . $char;
         }
     }
-    return sampling($chars, $size - 1, $new_combinations);
+    return sampling($chars, $size - 1, $new_kombs);
 }
 
-function splitbyPattern($inputSting, $pattern){
-    $patternLength = array();
+function split($inputSting, $pattern){
+    $pLength = array();
     foreach ($pattern as $length){
 
-        if (!in_array(strlen($length) , $patternLength))
+        if (!in_array(strlen($length) , $pLength))
         {
-            array_push($patternLength, strlen($length));
+            array_push($pLength, strlen($length));
         }
     }
-    $combination = sampling($patternLength, count($patternLength));
-    $MatchOutput = Array();
+    $komb = sampling($pLength, count($pLength));
+    $hasil = Array();
 
-    foreach ($combination as $comp){
+    foreach ($komb as $comp){
         $intlen = 0;
-        $MatchNotfound = true;
+        $mbuh = true;
         $value = "";
 
         foreach (str_split($comp, 1) as $length){
@@ -43,7 +43,7 @@ function splitbyPattern($inputSting, $pattern){
                     $value = $value . substr($inputSting, $intlen, $length) . ',';
                 }
                 else{
-                    $MatchNotfound = false;
+                    $mbuh = false;
                     break;
                 }
             }
@@ -52,65 +52,20 @@ function splitbyPattern($inputSting, $pattern){
             }
             $intlen = $intlen + $length;
         }
-        if ($MatchNotfound){
-            array_push($MatchOutput, substr($value, 0, strlen($value) - 1));
+        if ($mbuh){
+            array_push($hasil, substr($value, 0, strlen($value) - 1));
         }
     }
-    return array_unique($MatchOutput);
+    return array_unique($hasil);
 }
 
 $inputSting = "programmerit";
 $pattern = ['pro', 'gram', 'merit', 'program', 'programmer', 'it'];
-$output = splitbyPattern($inputSting, $pattern);
-foreach ($output as $out)
-{
+$output = split($inputSting, $pattern);
+
+foreach ($output as $out){
     echo $out . "<br>";
 }
 
-
-
-// function splitString($pattern, $string){
-
-//   $finalResult = $semiResult = $output = array();
-//   $cnt = 0;
-
-//   foreach($pattern as $key => $value){
-//     $cnt++;
-//     if(strpos($string, $value) !== false){
-
-//       if(implode("",$output) != $string){
-//           $output[] = $value;
-//           if($cnt == count($pattern)) $semiResult[]  = implode(",", $output);
-//       }else{
-//         $semiResult[]  = implode(",", $output);
-//         $output = array();
-//         $output[] = $value;
-//         if(implode("",$output) != $string){
-//           $semiResult[]  = implode(",", $output);
-//         }
-//       }
-//     }
-//   }
-
-//   foreach($semiResult as $key => $value){
-//     $stackString = explode(",", $value);
-//     if(str_replace(",", "", $value) != $string){
-//       foreach($pattern as $key => $value){
-//         if(!strpos(' '.implode("", $stackString), $value)){
-//           $stackString[] = $value;
-//         }
-//       }
-//       if(implode("", $stackString) == $string) $finalResult[] = implode(",", $stackString); 
-//     }else{
-//         $finalResult[] = $value;
-//     }
-//   }
-
-//   return $finalResult;
-// }
-
-// $pattern = array('pro', 'gram', 'merit', 'program', 'programmer','it');
-// $string = "programit";
-// echo "<pre>",print_r(splitString($pattern, $string),true),"</pre>";
 
 ?>
