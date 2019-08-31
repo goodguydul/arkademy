@@ -7,18 +7,6 @@ Input user berupa panjang alas dan tinggi segitiga (alas dan tingginya sama)deng
 Segitiga dibentuk dengan angka prima yang nilainya mulai dari awal setiap barisnya.
 Output berupa segitiga siku-siku.
  -->
-<!DOCTYPE html>
-<html>
-<head>
-	<title></title>
-</head>
-<body>
-	<form action="/" method="get">
-		<input type="text" name="n">
-		<button type="submit">Ok</button>
-	</form>
-</body>
-</html>
 
 
 <?php 
@@ -39,10 +27,10 @@ Output berupa segitiga siku-siku.
 		}
 	}
 
-	if (isset($_GET['n'])){
-		for ($n=1; $n <= $_GET['n']; $n++) {
+	function segitigaSikuSikuPrima($max){
+		for ($n=1; $n <= $max; $n++) {
 			$a = 0;
-			if ($_GET['n']<10) {
+			if ($max<10) {
 				
 				getPrime($n);
 				echo "<br>";
@@ -50,6 +38,9 @@ Output berupa segitiga siku-siku.
 			}else{
 				break;
 			}	
-		} 
-	}	
+		} 	
+	}
+
+	echo segitigaSikuSikuPrima(5);
+	
 ?>
