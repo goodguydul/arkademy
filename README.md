@@ -10,7 +10,7 @@
  
 **DEMO/SNAPSHOT PROGRAM SOAL NOMOR 6**
 
-- Program ini menggunakan bahasa PHP Native dan MySQL, Bootstrap, dan Javascript (jQuery, Ajax).
+- Program ini menggunakan bahasa PHP Native dan MySQL, Bootstrap, Bootbox, dan Javascript (jQuery, Ajax).
 - Download, lalu taruh di folder htdocs atau di folder localhost atau disesuaikan masing-masing.
 - Import crud.sql yang dilampirkan ke database.
 - Ubah settingan database di **config/koneksi.php**, lalu sesuaikan.
