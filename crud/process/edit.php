@@ -12,7 +12,7 @@ if($_POST){
 	$sql = "UPDATE nama SET ".rtrim($values,',')."WHERE id=".$_POST['id'];
 
 	if ($koneksi->query($sql) === TRUE) {
-	    print_r($_POST);
+	    echo "Data Berhasil Disimpan!";
 
 	} else {
 	    echo "Gagal: " . $koneksi->error;

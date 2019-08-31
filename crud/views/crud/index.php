@@ -4,7 +4,9 @@ require_once('config/koneksi.php');
 $urlcrud = "index.php?page=crud/";
 ?>
 <div class="row">
-	<div class="col-lg-10">
+	<div class="col-lg-2"></div>
+
+	<div class="col-lg-8">
 		<button style="float: right;margin-bottom: 10px" class="btn btn-warning btn-sm" data-toggle="modal" data-target="#createModal"><span class="glyphicon glyphicon-plus"></span> ADD</button>
 		<table class="table table-hover table-bordered" style="margin-top: 10px">
 			<tr class="success">
@@ -44,7 +46,7 @@ $urlcrud = "index.php?page=crud/";
 						      		</div>
 						      		<div class="modal-footer">
 							        	<button type="button" class="btn btn-secondary" data-dismiss="modal">CLOSE</button>
-							        	<button type="submit" class="btn btn-warning">ADD</button>
+							        	<button type="submit" class="btn btn-warning">EDIT</button>
 						      		</div>
 						      		</form>
 						    	</div>
@@ -58,6 +60,8 @@ $urlcrud = "index.php?page=crud/";
 			?>
 		</table>
 	</div>
+	<div class="col-lg-2"></div>
+
 	<div class="modal fade" id="createModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
 	  	<div class="modal-dialog" role="document">
 	    	<div class="modal-content">

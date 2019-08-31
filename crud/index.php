@@ -80,11 +80,15 @@
             url: "process/create.php",
             data: data,
             success: function(message) {
-              alert(message);
-              window.location.href='index.php?page=crud/index';
+              callBootbox(message,"<i class='glyphicon glyphicon-ok'></i> Sukses");
+              $('#createModal').modal('hide');
+              setTimeout(function(){
+                   window.location.href='index.php?page=crud/index';
+              }, 3000);
             },
             error: function(message) {
-              alert('message');
+              callBootbox(message,"<i class='glyphicon glyphicon glyphicon-remove'></i> Error");
+
             }
           });
         });
@@ -107,11 +111,16 @@
               url: "process/edit.php",
               data: data,
               success: function(message) {
-                alert(message);
-                window.location.href='index.php?page=crud/index';
+                callBootbox(message,"<i class='glyphicon glyphicon-ok'></i> Sukses");
+                $('#editModal'+dataId).modal('hide');
+
+                setTimeout(function(){
+                     window.location.href='index.php?page=crud/index';
+                }, 2000);
+                
               },
               error: function(message) {
-                alert(message);
+                callBootbox(message,"<i class='glyphicon glyphicon glyphicon-remove'></i> Error");
               }
             });
           });
@@ -168,6 +177,15 @@
             });                       
         });        
     });
+    </script>
+    <script type="text/javascript">
+      function callBootbox(msg,ttl){
+          bootbox.alert({
+            title   : ttl,
+            message : msg,
+            size    : "medium"
+          });
+      }
     </script>
   </body>
 </html>
