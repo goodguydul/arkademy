@@ -1,4 +1,4 @@
-# Arkademy
+# Arkademy Test Code - Seleksi Bootcamp Arkademy Batch 12 - 1
 **Jawaban Soal Bootcamp Arkademy**
  
  >- Untuk jawaban soal nomor 1-5 ada di setiap file "soal_[nomor soal]" 
