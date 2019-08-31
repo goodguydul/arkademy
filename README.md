@@ -1,7 +1,7 @@
 # Test Code - Seleksi Bootcamp Arkademy Batch 12-1
 **Jawaban Soal Bootcamp Arkademy**
  
- >- Untuk jawaban soal nomor 1-5 ada di setiap file "soal_[nomor soal]" 
+ >- Untuk jawaban soal nomor 1-5 ada di setiap file "soal_[nomor soal].php" 
  >- Untuk jawaban soal nomor 6 ada di dalam direktori /crud/
  
 **FUNGSI JSON PADA WEB API**
