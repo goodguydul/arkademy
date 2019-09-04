@@ -55,5 +55,4 @@ Berikut adalah contoh dari JSON format: https://api.bukalapak.com/v2/products/f3
 print_r(getBiodata());
 
 //Fungsi JSON dari web API adalah sebagai format untuk mengirim/menerima data dari server ke client, atau pun sebaliknya.
-
 ?>
