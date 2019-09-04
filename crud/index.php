@@ -59,7 +59,7 @@
         include('views/'.$_GET['page'].'.php');
       }else{
       echo '<div class="jumbotron">
-        <p>Crud Native Example</p>
+        <p>Crud Ark</p>
       </div>';
       }
       ?>
