@@ -12,7 +12,6 @@
                 $stringParts = str_split($key);
                 sort($stringParts);
                 $temp2      .= implode('', $stringParts);
-
             }
         }else{
             $stringParts = str_split($value);

@@ -17,7 +17,7 @@ Output berupa segitiga siku-siku.
 		while ($max<$n) {
 			$prima = true;
 			for ($i=2; $i < $x ; $i++) { 
-				if ($x % $i ==0) {
+				if ($x % $i == 0) {
 					$prima = false;		
 				}
 			}if ($prima == true) {
